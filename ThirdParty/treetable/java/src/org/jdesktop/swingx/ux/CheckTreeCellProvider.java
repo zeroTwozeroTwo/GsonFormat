@@ -28,14 +28,14 @@ public class CheckTreeCellProvider extends ComponentProvider<JPanel> {
 
     public CheckTreeCellProvider(CheckTreeSelectionModel selectionModel) {
         this.selectionModel = selectionModel;
-        _checkBox = new TristateCheckBox(); //  åˆ›å»ºä¸€ä¸ªTristateCheckBoxå®ä¾‹
-        _checkBox.setOpaque(false); //  è®¾ç½®TristateCheckBoxä¸ç»˜åˆ¶èƒŒæ™¯
-        _label = new JLabel();  //  åˆ›å»ºä¸€ä¸ªJLabelå®ä¾‹
+        _checkBox = new TristateCheckBox(); //  ´´½¨Ò»¸öTristateCheckBoxÊµÀı
+        _checkBox.setOpaque(false); //  ÉèÖÃTristateCheckBox²»»æÖÆ±³¾°
+        _label = new JLabel();  //  ´´½¨Ò»¸öJLabelÊµÀı
     }
 
     @Override
     protected void format(CellContext arg0) {
-        //  ä»CellContextè·å–treeä¸­çš„æ–‡å­—å’Œå›¾æ ‡
+        //  ´ÓCellContext»ñÈ¡treeÖĞµÄÎÄ×ÖºÍÍ¼±ê
         JTree tree = (JTree) arg0.getComponent();
         DefaultMutableTreeTableNode node = (DefaultMutableTreeTableNode) arg0.getValue();
         Object obj = node.getUserObject();
@@ -49,19 +49,19 @@ public class CheckTreeCellProvider extends ComponentProvider<JPanel> {
 
 //        _label.setIcon(arg0.getIcon());
 
-        //  æ ¹æ®selectionModelä¸­çš„çŠ¶æ€æ¥ç»˜åˆ¶TristateCheckBoxçš„å¤–è§‚
+        //  ¸ù¾İselectionModelÖĞµÄ×´Ì¬À´»æÖÆTristateCheckBoxµÄÍâ¹Û
         TreePath path = tree.getPathForRow(arg0.getRow());
         if (path != null) {
             if (selectionModel.isPathSelected(path, true)) {
                 _checkBox.setState(Boolean.TRUE);
             } else if (selectionModel.isPartiallySelected(path)) {
-                _checkBox.setState(null);   //  æ³¨æ„â€œéƒ¨åˆ†é€‰ä¸­â€çŠ¶æ€çš„API
+                _checkBox.setState(null);   //  ×¢Òâ¡°²¿·ÖÑ¡ÖĞ¡±×´Ì¬µÄAPI
             } else {
                 _checkBox.setState(Boolean.FALSE);
             }
         }
 
-        //  ä½¿ç”¨BorderLayoutå¸ƒå±€ï¼Œä¾æ¬¡æ”¾ç½®TristateCheckBoxå’ŒJLabel
+        //  Ê¹ÓÃBorderLayout²¼¾Ö£¬ÒÀ´Î·ÅÖÃTristateCheckBoxºÍJLabel
         rendererComponent.setLayout(new BorderLayout());
         rendererComponent.add(_checkBox);
         rendererComponent.add(_label, BorderLayout.LINE_END);
@@ -72,7 +72,7 @@ public class CheckTreeCellProvider extends ComponentProvider<JPanel> {
     }
 
     /**
-     * åˆå§‹åŒ–ä¸€ä¸ªJPanelæ¥æ”¾ç½®TristateCheckBoxå’ŒJLabel
+     * ³õÊ¼»¯Ò»¸öJPanelÀ´·ÅÖÃTristateCheckBoxºÍJLabel
      */
     @Override
     protected JPanel createRendererComponent() {

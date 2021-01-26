@@ -12,10 +12,10 @@ import org.json.JSONObject;
 public class FieldEntity implements Selector, CellProvider {
 
     protected String key;
-    protected String type; //ç±»å‹
-    protected String fieldName; // ç”Ÿæˆçš„åå­—
-    protected String value; // å€¼
-    protected ClassEntity targetClass; //ä¾èµ–çš„å®ä½“ç±»
+    protected String type; //ÀàĞÍ
+    protected String fieldName; // Éú³ÉµÄÃû×Ö
+    protected String value; // Öµ
+    protected ClassEntity targetClass; //ÒÀÀµµÄÊµÌåÀà
     protected boolean generate = true;
 
     public ClassEntity getTargetClass() {
@@ -92,12 +92,12 @@ public class FieldEntity implements Selector, CellProvider {
 
     public void checkAndSetType(String text) {
         if (type != null && CheckUtil.getInstant().checkSimpleType(type.trim())) {
-            //åŸºæœ¬ç±»å‹
+            //»ù±¾ÀàĞÍ
             if (CheckUtil.getInstant().checkSimpleType(text.trim())) {
                 this.type = text.trim();
             }
         } else {
-            //å®ä½“ç±»:
+            //ÊµÌåÀà:
             if (targetClass != null && !targetClass.isLock()) {
                 if (!TextUtils.isEmpty(text)) {
                     targetClass.setClassName(text);

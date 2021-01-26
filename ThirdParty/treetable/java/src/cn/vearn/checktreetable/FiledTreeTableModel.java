@@ -23,7 +23,7 @@ public class FiledTreeTableModel extends DefaultTreeTableModel {
     }
 
     /**
-     * åˆ—çš„ç±»å‹
+     * ÁĞµÄÀàĞÍ
      */
     @Override
     public Class getColumnClass(int col) {
@@ -31,7 +31,7 @@ public class FiledTreeTableModel extends DefaultTreeTableModel {
     }
 
     /**
-     * åˆ—çš„æ•°é‡
+     * ÁĞµÄÊıÁ¿
      */
     @Override
     public int getColumnCount() {
@@ -39,7 +39,7 @@ public class FiledTreeTableModel extends DefaultTreeTableModel {
     }
 
     /**
-     * è¡¨å¤´æ˜¾ç¤ºçš„å†…å®¹
+     * ±íÍ·ÏÔÊ¾µÄÄÚÈİ
      */
     @Override
     public String getColumnName(int column) {
@@ -47,7 +47,7 @@ public class FiledTreeTableModel extends DefaultTreeTableModel {
     }
 
     /**
-     * è¿”å›åœ¨å•å…ƒæ ¼ä¸­æ˜¾ç¤ºçš„Object
+     * ·µ»ØÔÚµ¥Ôª¸ñÖĞÏÔÊ¾µÄObject
      */
     @Override
     public Object getValueAt(Object node, int column) {

@@ -198,7 +198,7 @@ public abstract class Processor {
         onStartGenerateClass(factory, classEntity, parentClass, visitor);
         PsiClass generateClass = null;
         if (classEntity.isGenerate()) {
-            //// TODO: 16/11/9  å¾…é‡æ„ 
+            //// TODO: 16/11/9  ´ıÖØ¹¹ 
             if (Config.getInstant().isSplitGenerate()) {
                 try {
                     generateClass = PsiClassUtil.getPsiClass(

@@ -17,7 +17,7 @@ public class Config {
     private boolean arrayFromData = false;
     private boolean arrayFromData1 = false;
     private boolean reuseEntity = false;
-    private boolean virgoMode = true; //å¤„å¥³åº§æ¨¡å¼
+    private boolean virgoMode = true; //´¦Å®×ùÄ£Ê½
     private boolean useFieldNamePrefix = false;
     private boolean splitGenerate = false;
 
@@ -26,18 +26,18 @@ public class Config {
     private String objectFromDataStr1;
     private String arrayFromDataStr;
     private String arrayFromData1Str;
-    private String annotationStr; //æ³¨è§£è¯­å¥
-    private String filedNamePreFixStr; //å­—æ®µå‰ç¼€
-    private String entityPackName;//åˆ›å»ºå®ä½“ç±»çš„åŒ…å.
+    private String annotationStr; //×¢½âÓï¾ä
+    private String filedNamePreFixStr; //×Ö¶ÎÇ°×º
+    private String entityPackName;//´´½¨ÊµÌåÀàµÄ°üÃû.
     private String suffixStr;
 
     /**
-     * é”™è¯¯æ¬¡æ•°,å‰ä¸¤æ¬¡æé†’å“ªé‡ŒæŸ¥çœ‹é”™è¯¯æ—¥å¿—.
+     * ´íÎó´ÎÊı,Ç°Á½´ÎÌáĞÑÄÄÀï²é¿´´íÎóÈÕÖ¾.
      */
     private int errorCount;
 
     /**
-     * æ˜¯å¦ä½¿ç”¨åŒ…è£…ç±»æ¥æ›¿ä»£åŸºæœ¬ç±»å‹
+     * ÊÇ·ñÊ¹ÓÃ°ü×°ÀàÀ´Ìæ´ú»ù±¾ÀàĞÍ
      */
     private boolean useWrapperClass;
 

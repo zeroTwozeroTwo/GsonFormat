@@ -31,7 +31,7 @@ import java.util.regex.Pattern;
 
 /**
  * Created by dim on 2015/8/21.
- * æŠŠ json è½¬æˆ å®ä½“ç±»
+ * °Ñ json ×ª³É ÊµÌåÀà
  */
 public class ConvertBridge {
 
@@ -238,7 +238,7 @@ public class ConvertBridge {
     }
 
     /**
-     * è¿‡æ»¤æ‰// å’Œ/** æ³¨é‡Š
+     * ¹ıÂËµô// ºÍ/** ×¢ÊÍ
      *
      * @param str
      * @return
@@ -504,7 +504,7 @@ public class ConvertBridge {
 
 
     private FieldEntity createField(ClassEntity parentClass, String key, Object type) {
-        //è¿‡æ»¤ ä¸ç¬¦åˆè§„åˆ™çš„key
+        //¹ıÂË ²»·ûºÏ¹æÔòµÄkey
         String fieldName = CheckUtil.getInstant().handleArg(key);
         if (Config.getInstant().isUseSerializedName()) {
             fieldName = StringUtils.captureStringLeaveUnderscore(convertSerializedName(fieldName));
@@ -597,7 +597,7 @@ public class ConvertBridge {
         if (Config.getInstant().isSplitGenerate()) {
             String qualifiedName = packageName == null ? className : packageName + "." + className;
             if (CheckUtil.getInstant().containsDeclareClassName(qualifiedName)) {
-                //å­˜åœ¨åŒåã€‚
+                //´æÔÚÍ¬Ãû¡£
                 PsiClass psiClass = PsiClassUtil.exist(file, qualifiedName);
                 if (psiClass != null) {
                     ClassEntity classEntity = collectClassAttribute(psiClass, false);
