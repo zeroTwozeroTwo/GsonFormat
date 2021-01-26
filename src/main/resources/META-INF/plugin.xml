@@ -22,6 +22,12 @@
   <li>fix several bug </li>
   <li>fix unlock setting window size </li>
   </p>
+  <ul>
+  1.5.1
+  <ul>
+  <li>support android studio 4.1 </li>
+  </p>
+  <ul>
 ]]></change-notes>
     <actions>
         <action id="Gsonformat" class="org.gsonformat.intellij.MainAction" text="GsonFormat">
@@ -30,4 +36,5 @@
         </action>
     </actions>
     <extensions defaultExtensionNs="com.intellij"/>
+    <depends>com.intellij.modules.java</depends>
 </idea-plugin>
